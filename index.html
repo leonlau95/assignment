@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Japan</title>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style3.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+		
+	</head>
+	<body class="landing">
+		<header id="header" class="layers">
+		<h1><a href="index.html">Youtuber</a></h1>
+		<nav id="nav">
+		<ul>
+			<li><a href="japan.html">Japan Youtuber</a></li>
+		</ul>
+        </nav>
+        </header>
+            
+        <div id="container1">
+            <img class="slides" src="img/japan01.jpg"/>
+            <img class="slides" src="img/japan02.jpg"/>
+            <img class="slides" src="img/japan03.jpg"/>
+            <img class="slides" src="img/japan04.jpg"/>
+            <img class="slides" src="img/japan05.jpg"/>
+            <button class="btn" onclick="plusIndex(-1)" id="btn1">&#10094;</button>
+            <button class="btn" onclick="plusIndex(1)" id="btn2">&#10095;</button>
+        </div>
+       
+        <script>
+            var index = 1;
+            
+            function plusIndex(n){
+            index = index + n;
+            showImage(index);
+            }
+            
+            showImage(1);
+            
+            function showImage(n){
+                var i;
+                var x = document.getElementsByClassName("slides");
+                if (n > x.length){ index = 1 };
+                if (n < 1){ index = x.length };
+                for (i = 0; i < x.length; i++){
+                    x[i].style.display = "none";
+                }
+                x[index-1].style.display = "block";
+            }
+            autoSlide();
+            function autoSlide(){
+                var i;
+                var x = document.getElementsByClassName("slides");
+                for (i = 0; i < x.length; i++){
+                    x[i].style.display = "none";
+                }
+                if (index > x.length){ index = 1 };
+                x[index-1].style.display = "block";
+                index++;
+                setTimeout(autoSlide,2000);
+            }
+        </script>
+            
+			<section id="three" class="wrapper style1">
+                <div class="container">
+                    <header class="major">
+                        <h2>State of Japan</h2>
+                        <p>On the below there are a few state is the Japanese prefectural capitals.</p>
+                    </header>
+                    <div class="row">
+                        <div class="4u 6u(2) 12u$(3)">
+                            <article class="box post">
+                                <a href="#" class="image fit"><img src="img/kyoto.jpeg" alt="" /></a>
+                                <h3>Kyoto</h3>
+                                <p>Kyoto, once the capital of Japan, is a city on the island of Honshu. 
+                                    It's famous for its numerous classical Buddhist temples, as well as gardens, 
+                                    imperial palaces, Shinto shrines and traditional wooden houses. Its also 
+                                    known for formal traditions such as kaiseki dining, consisting of multiple 
+                                    courses of precise dishes, and geisha, female entertainers often found in the Gion district.</p>
+                                <ul class="actions">
+                                    <li><a href="https://en.wikipedia.org/wiki/Kyoto" class="button">Learn More</a></li>
+                                </ul>
+                            </article>
+                        </div>
+                        <div class="4u 6u$(2) 12u$(3)">
+                            <article class="box post">
+                                <a href="#" class="image fit"><img src="img/nagasaki.jpg" alt="" /></a>
+                                <h3>Nagasaki</h3>
+                                <p>Nagasaki is a Japanese city on the northwest coast of the island of Kyushu.
+                                    Its set on a large natural harbor, with buildings on the terraces of surrounding hills.
+                                    It is synonymous with a key moment during World War II, after suffering an Allied nuclear 
+                                    attack in August 1945. The event is memorialized at the citys Atomic Bomb Museum and Peace Park.</p>
+                                <ul class="actions">
+                                    <li><a href="https://en.wikipedia.org/wiki/Nagasaki" class="button">Learn More</a></li>
+                                </ul>
+                            </article>
+                        </div>
+                        <div class="4u$ 6u(2) 12u$(3)">
+                            <article class="box post">
+                                <a href="#" class="image fit"><img src="img/nagoya.jpg" alt="" /></a>
+                                <h3>Nagoya</h3>
+                                <p>Nagoya, capital of Japans Aichi Prefecture, is a manufacturing and shipping hub in central Honshu. 
+                                    The citys Naka ward is home to museums and pachinko (gambling machine) parlors. Naka also includes 
+                                    the Sakae entertainment district, with attractions like the Sky-Boat Ferris wheel, which is attached
+                                    to a mall. In northern Naka is Nagoya Castle, a partly reconstructed 1612 royal home displaying Edo-era artifacts.</p>
+                                <ul class="actions">
+                                    <li><a href="https://en.wikipedia.org/wiki/Nagoya" class="button">Learn More</a></li>
+                                </ul>
+                            </article>
+                        </div>
+                        <div class="4u 6u$(2) 12u$(3)">
+                            <article class="box post">
+                                <a href="#" class="image fit"><img src="img/osaka.jpg" alt="" /></a>
+                                <h3>Osaka</h3>
+                                <p>Osaka is a large port city and commercial center on the Japanese island of Honshu. Its known for its modern 
+                                    architecture, nightlife and hearty street food. The 16th-century shogunate Osaka Castle, which has undergone 
+                                    several restorations, is its main historical landmark. Its surrounded by a moat and park with plum, peach and 
+                                    cherry-blossom trees. Sumiyoshi-taisha is among Japans oldest Shinto shrines.</p>
+                                <ul class="actions">
+                                    <li><a href="https://en.wikipedia.org/wiki/Osaka" class="button">Learn More</a></li>
+                                </ul>
+                            </article>
+                        </div>
+                        <div class="4u 6u(2) 12u$(3)">
+                            <article class="box post">
+                                <a href="#" class="image fit"><img src="img/sendai.jpg" alt="" /></a>
+                                <h3>Sendai</h3>
+                                <p>Sendai is a city in Japans Tohoku Region, northeast of Tokyo on Honshu island. The remains of 17th-century 
+                                    Sendai Castle, built for samurai lord Date Masamune on Aoba Hill, overlook the city and include a museum of 
+                                    historic artifacts. The Sendai City Museum focuses on the history and culture of Japans Edo period, and 
+                                    displays Masamunes samurai armor.</p>
+                                <ul class="actions">
+                                    <li><a href="https://en.wikipedia.org/wiki/Sendai" class="button">Learn More</a></li>
+                                </ul>
+                            </article>
+                        </div>
+                        <div class="4u$ 6u$(2) 12u$(3)">
+                            <article class="box post">
+                                <a href="#" class="image fit"><img src="img/tokyo.jpg" alt="" /></a>
+                                <h3>Tokyo</h3>
+                                <p>Tokyo, Japans busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. 
+                                    The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods. The Imperial Palace sits amid 
+                                    large public gardens. The city's many museums offer exhibits ranging from classical art (in the Tokyo National Museum) 
+                                    to a reconstructed kabuki theater (in the Edo-Tokyo Museum).</p>
+                                <ul class="actions">
+                                    <li><a href="https://en.wikipedia.org/wiki/Tokyo" class="button">Learn More</a></li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer id="footer">
+                <ul class="icons">
+                    <li><a href="https://twitter.com/?lang=en" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="https://www.facebook.com/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="https://www.instagram.com/?hl=en" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="https://dribbble.com/" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+                    <li><a href="https://www.gmail.com/" class="icon fa-envelope"><span class="label">Envelope</span></a></li>
+                    <li><a href="https://www.yahoo.com/" class="icon fa-yahoo"><span class="label">Yahoo</span></a></li>
+                    <li><a href="https://www.google.com/" class="icon fa-google"><span class="label">Google</span></a></li>
+                </ul>	
+            </footer>
+        </body>
+</html>
